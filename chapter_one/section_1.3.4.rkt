@@ -42,3 +42,7 @@
 
 (define (sqrt-newton x)
     (newtons-method (lambda (y) (- (square y) x)) 1.0))
+
+(define (fixed-point-of-transformation f transform guess)
+    (fixed-point (transform g) guess))
+

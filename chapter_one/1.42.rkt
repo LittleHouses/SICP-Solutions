@@ -3,4 +3,4 @@
 
 (define (inc x) (+ 1 x))
 
-(define (square x) (* x x))
+(define (square x) (* x x))c
