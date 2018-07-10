@@ -1,3 +1,5 @@
+;; Eular Function: 1,2,1,1,4,1,1,6,1,1,8,...
+
 (define (eular k)
     (cond
         ((= (modulo (+ k 1) 3) 0)

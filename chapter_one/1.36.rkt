@@ -14,3 +14,5 @@
                 next
                 (try next))))
     (try first-guess))
+
+; (fixed-point (lambda (y) (/ (log 1000) (log y))) 2.0)

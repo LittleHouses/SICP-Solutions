@@ -1,4 +1,4 @@
-;; J.H. Lambert is a hunk. 
+;; J.H. Lambert is a hunk, but no one will ever match Leonhard Eular. 
 
 (define (lambert-N k x)
     (cond 
