@@ -7,7 +7,6 @@
         (expt 2 a)
         (expt 3 b)))
 
-;;; Example: (int-pair 2 4) == 324
 
 (define (car x)
     (iter-core x 0 2))
@@ -21,6 +20,7 @@
         (else factor)))
 
 
+;;; Example: (int-pair 2 4) == 324
 (define alpha (int-pair 2 4))
 (display alpha)
 (newline)
