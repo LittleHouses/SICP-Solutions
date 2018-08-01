@@ -52,9 +52,12 @@
 ;;; Supersets of our original interval -> Less Accurate, Less "tight"
 ;;; We double the uncertainty with each 
 
-;;; For center-point-form product tolerance = (1 +- (T1+T2) + T1*T2)
 
 
 (display (mul-interval A A))
 
 ;;; When we perfrom calculations with numbers that are uncertain -> intevals, we compound that uncertainty. 
+;;; This has to do with the fact that we take the max and min when we multiple 2 intervals. 
+#| observe:
+Let I = [a,b]
+Theoretically, we would expect preforming an arbitrary amount of inverse arithma

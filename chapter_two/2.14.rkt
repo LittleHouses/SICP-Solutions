@@ -5,6 +5,21 @@
 
 (define (lower-bound interval) (car interval))
 
+(define (make-center-width c w)
+    (make-interval (- c w) (+ c w)))
+
+(define (center i)
+    (/ (+ (lower-bound i) (upper-bound i)) 2))
+
+(define (width i)
+    (/ (- (upper-bound i) (upper-bound i)) 2))
+
+(define (make-center-percent center tolerance)
+    (make-interval center (* tolerance center)))
+
+(define (percent i)
+    (/ (width i) (center i)))
+
 (define (add-interval x y )
     (make-interval 
         (+ (lower-bound x) (lower-bound y))
@@ -50,5 +65,7 @@
 (display (par2 A A))
 (newline)
 (display(div-interval A A))
+;;; For a center-point-form interval this should produce: [0.5,1.5] for A = [1,3]
+;;; However, it produces [1/3,3], a much wider interval.
 (newline)
 (display(div-interval A B))
