@@ -38,3 +38,21 @@
 (define combined (append squares odds))
 (display combined)
 (newline)
+
+;; Mapping over a list:
+(define (scale-list items factor)
+    (if (null? items)
+        '()
+        (cons 
+            (* (car items) factor)
+            (scale-list (cdr items) factor))))
+
+;; Map:
+(define (map proc items)
+    (if (null? items)
+        '()
+        (cons
+            (proc (car items))
+            (map proc (cdr items)))))
+
+
